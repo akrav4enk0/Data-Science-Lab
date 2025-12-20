@@ -11,9 +11,11 @@ Once you got the keys:
 ssh-add -t 1d ~/.ssh/cscs-key
 ```
 2. Access to ETH Clariden cluster
-```ssh clariden```
+```
+ssh clariden
+```
 
-3. Conda environment
+4. Conda environment
 ```source ~/miniconda3/etc/profile.d/conda.sh
 conda activate
 ```
