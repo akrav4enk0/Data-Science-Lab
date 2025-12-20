@@ -50,3 +50,6 @@ awk -F, '
     printf "%-40s %5s %10s\n","model","n","mean(s)";
     for (m in n) printf "%-40s %5d %10.2f\n", m, n[m], sum[m]/n[m]
   }' "$SUMMARY" | sort
+
+echo
+echo "Done."
