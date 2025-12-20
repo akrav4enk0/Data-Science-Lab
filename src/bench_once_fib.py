@@ -1,22 +1,33 @@
-
-import os, time, csv, pathlib, datetime, sys, math
+import os, time, csv, pathlib, datetime, sys
 from openai import OpenAI
 
 API_KEY  = os.environ.get("OPENAI_API_KEY")
 BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://api.swissai.cscs.ch/v1")
 MODEL    = os.environ.get("OPENAI_MODEL", "swiss-ai/Apertus-70B-Instruct-2509")
 
+if not API_KEY:
+    raise SystemExit("OPENAI_API_KEY is not set. Please export it before running.")
+
 PROMPT = (sys.argv[1] if len(sys.argv) > 1
           else "Write a Python function fib(n) that returns the first n Fibonacci numbers and print(fib(10)).")
 TAG    = sys.argv[2] if len(sys.argv) > 2 else "fib"
 
-root   = pathlib.Path.home() / "swissai-demo"
-outdir = root / "opencode"
+# Repo root = one level above src/
+REPO_ROOT = pathlib.Path(__file__).resolve().parents[1]
+
+outdir = REPO_ROOT / "results" / "answers"
 outdir.mkdir(parents=True, exist_ok=True)
 
 safe_model = MODEL.replace("/", "_").replace(":", "-")
-outfile    = outdir / f"{safe_model}_{TAG}.txt"
-csv_path   = root / "summary.csv"
+
+# Optional: unique output per run so answers are not overwritten
+ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+outfile = outdir / f"{safe_model}_{TAG}_{ts}.txt"
+# If you prefer overwriting instead, use:
+# outfile = outdir / f"{safe_model}_{TAG}.txt"
+
+csv_path = REPO_ROOT / "results" / "fib_latency_summary.csv"
+csv_path.parent.mkdir(parents=True, exist_ok=True)
 
 client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
 
@@ -101,4 +112,3 @@ if not skip:
     print(f"Saved: {outfile}")
 if err:
     print(f"Note: API error recorded (continuing): {err}")
-
