@@ -16,7 +16,8 @@ ssh clariden
 ```
 
 4. Conda environment
-```source ~/miniconda3/etc/profile.d/conda.sh
+```
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate
 ```
 
