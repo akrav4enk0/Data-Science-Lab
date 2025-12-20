@@ -4,7 +4,7 @@ from openai import OpenAI
 
 API_KEY  = os.environ.get("OPENAI_API_KEY")
 BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://api.swissai.cscs.ch/v1")
-MODEL    = os.environ.get("OPENAI_MODEL", "Qwen/Qwen3-32B")
+MODEL    = os.environ.get("OPENAI_MODEL", "swiss-ai/Apertus-70B-Instruct-2509")
 
 PROMPT = (sys.argv[1] if len(sys.argv) > 1
           else "Write a Python function fib(n) that returns the first n Fibonacci numbers and print(fib(10)).")
