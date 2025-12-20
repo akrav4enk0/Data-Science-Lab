@@ -21,4 +21,16 @@ conda activate
 ## Model Deployment
 All model deployments in this project follow the deployment methodology provided by the [swiss-ai/model-launch](https://github.com/swiss-ai/model-launch) repository. This repository provides standardized tools and configurations for deploying large language models on the Clariden cluster using SLURM job scheduling.
 
+The following models were successfully deployed and evaluated 
+using the model-launch framework:
 
+**Swiss Models**:
+- **Apertus-8B-Instruct-2509** (8B parameters)
+- **Apertus-70B-Instruct-2509** (70B parameters)
+
+**International Models**:
+- **DeepSeek-V3.1** (685B parameters) - Multi-node deployment
+- **Kimi-K2-Instruct** (1T parameters)
+- **Qwen2.5-Coder-14B-Instruct** (14B parameters)
+- **Mistral-7B-Instruct-v0.3** (7B parameters)
+- **GLM-4.6** (evaluation in progress)
