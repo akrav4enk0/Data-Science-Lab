@@ -15,7 +15,8 @@ WARMUP=${4:-3}
 mkdir -p results
 SUMMARY="results/fib_latency_summary.csv"
 
-MODELS=(
+# Default model list (kept in the repo)
+DEFAULT_MODELS=(
   "swiss-ai/Apertus-8B-Instruct-2509"
   "Qwen/Qwen3-32B"
   "swiss-ai/Apertus-70B-Instruct-2509"
@@ -24,10 +25,20 @@ MODELS=(
   "mistralai/Mistral-7B-Instruct-v0.2"
 )
 
+# Optional: override default model list without editing the script.
+# Examples:
+#   MODELS="swiss-ai/Apertus-8B-Instruct-2509" ./scripts/bench_loop_fib.sh
+#   MODELS="modelA,modelB" ./scripts/bench_loop_fib.sh
+if [[ -n "${MODELS:-}" ]]; then
+  IFS=',' read -r -a MODELS_ARR <<< "$MODELS"
+else
+  MODELS_ARR=("${DEFAULT_MODELS[@]}")
+fi
+
 echo "Writing results to: $SUMMARY"
 echo
 
-for m in "${MODELS[@]}"; do
+for m in "${MODELS_ARR[@]}"; do
   echo "=== $m ==="
   export OPENAI_MODEL="$m"
 
