@@ -1,1 +1,27 @@
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node / JS (opencode or tooling)
+node_modules/
+
+# Secrets / env files (never commit real keys)
+env_*.sh
+*secret*
+*key*
+*.pem
+
+# Large outputs/logs
+results/**/raw/
+*.log
+tmp/
 
