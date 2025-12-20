@@ -18,6 +18,7 @@ conda activate
 
 ```
 
-
-
 ## Model Deployment
+All model deployments in this project follow the deployment methodology provided by the [swiss-ai/model-launch](https://github.com/swiss-ai/model-launch) repository. This repository provides standardized tools and configurations for deploying large language models on the Clariden cluster using SLURM job scheduling.
+
+
