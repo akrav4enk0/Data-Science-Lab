@@ -1,0 +1,8 @@
+model,n,mean_seconds
+Qwen/Qwen3-Next-80B-A3B-Thinking,50,2.057140
+swiss-ai/Apertus-70B-Instruct-2509,50,6.646340
+swiss-ai/Apertus-8B-Instruct-2509,50,0.868340
+deepseek-ai/DeepSeek-V3.1,50,8.224760
+moonshotai/Kimi-K2-Thinking,50,6.963060
+Qwen/Qwen3-32B,50,3.743850
+mistralai/Mistral-7B-v0.1,50,0.918760
