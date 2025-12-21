@@ -13,7 +13,7 @@ It produces:
 ## Prerequisites
 
 - Python 3.10+
-- Dependencies installed from `requirements.txt`
+- Dependencies installed from [`requirements.txt`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/requirements.txt)
 - An API key configured (SwissAI or OpenRouter), depending on your setup
 
 ---
