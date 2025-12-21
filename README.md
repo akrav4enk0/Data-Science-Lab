@@ -2,7 +2,7 @@
 
 This project was carried out in the context of the SwissAI Initiative [SwissAI Initiative](https://www.swiss-ai.org/apertus) and supported by the [ETH AI Center](https://ai.ethz.ch/) during the [Data Science Lab course](https://ai.ethz.ch/education/courses/datasciencelab.html) at ETH Zurich.
 
-Reproducible code and results for the ETH Zurich Data Science Lab (263-3300-10L) project (Dec 2025): deploying SwissAI/Clariden-hosted LLMs and evaluating them via Terminal-Bench and a custom Fibonacci latency benchmark.
+This repository consists of reproducible code and results for the ETH Zurich Data Science Lab (263-3300-10L) project (Fall 2025): deploying SwissAI/Clariden-hosted LLMs and evaluating them via Terminal-Bench and a custom Fibonacci latency benchmark.
 
 Project title:  Evaluation of a Swiss LLM-based Coding Assistant
 
