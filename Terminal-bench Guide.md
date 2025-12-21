@@ -75,3 +75,8 @@ uvx terminal-bench run -d terminal-bench-core==0.1.1 -a terminus  -m openai/moon
 ```
 uvx terminal-bench run -d terminal-bench-core==0.1.1 -a terminus  -m openai/zai-org/GLM-4.6
 ```
+
+### Qwen/Qwen3-Next-80B-A3B-Instruct
+```
+uvx terminal-bench run -d terminal-bench-core==0.1.1 -a terminus  -m Qwen/Qwen3-Next-80B-A3B-Instruct
+```
