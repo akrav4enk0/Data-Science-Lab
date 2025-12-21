@@ -45,7 +45,7 @@ Terminal-Bench provides a standardized evaluation suite for coding agents using 
 ### Fibonacci latency benchmark (custom)
 This custom benchmark focuses on latency measurement using a controlled Fibonacci prompt, logging every run (timestamp + runtime) and generating an aggregated mean-latency table used in the report.
 
-- See [docs/fib-latency-benchmark-guide.md](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/docs/fib-latency-benchmark-guide.md)
+- See [docs/fib-latency-benchmark-guide](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/docs/fib-latency-benchmark-guide.md)
 
 ## Results
 
