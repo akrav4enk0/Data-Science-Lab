@@ -60,4 +60,38 @@ CLEAR_RESULTS=1 \
 MODELS="MODEL_A,MODEL_B,MODEL_C" \
 ./scripts/bench_loop_fib.sh "" fib 50 3
 ```
----
+##### Arguments used above:
+`fib` — benchmark task
+`50` — number of measured runs
+`3` — warmup runs (excluded from latency mean)
+`CLEAR_RESULTS=1` — clears previous CSV logs before writing new ones
+
+##### Outputs:
+- Per-run log (evidence of runs) [`results/fib_latency_benchmark/fib_latency_summary.csv`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/fib_latency_summary.csv) contains one row per measured run with: `timestamp`, `model`, `task`, `real_seconds`, `output_file`.
+
+Note: `output_file` typically contains a local absolute path (machine-specific).
+
+- Mean latency table (used in report) [`results/fib_latency_benchmark/fib_latency_mean.csv`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/fib_latency_mean.csv) is a compact table with mean latency per model.
+
+If you want to regenerate it from the per-run log:
+```
+awk -F, '
+NR==1 {next}
+{sum[$2]+=$4; n[$2]++}
+END {
+  print "model,Number of runs,Mean latency [s]"
+  for (m in n) printf "%s,%d,%.6f\n", m, n[m], sum[m]/n[m]
+}' results/fib_latency_benchmark/fib_latency_summary.csv | sort > results/fib_latency_benchmark/fib_latency_mean.csv
+```
+
+- Sample outputs committed to the repo
+
+[`results/fib_latency_benchmark/sample_outputs/`](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/fib_latency_benchmark/sample_outputs) contains a few .txt outputs (e.g. [`Apertus-70B`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/sample_outputs/swiss-ai_Apertus-70B-Instruct-2509_fib_20251221_013332.txt) and [`Apertus-8B`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/sample_outputs/swiss-ai_Apertus-8B-Instruct-2509_fib_20251221_012833.txt))
+as examples/proof-of-run. Full outputs can be large, so only a small subset is tracked.
+
+### Troubleshooting
+
+If you get “model not found / not spun up”, check the currently available SwissAI models:
+https://serving.swissai.cscs.ch/
+
+If you get auth errors, re-source your env file and confirm the key is set.
