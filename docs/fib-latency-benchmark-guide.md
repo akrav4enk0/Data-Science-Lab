@@ -62,8 +62,11 @@ MODELS="MODEL_A,MODEL_B,MODEL_C" \
 ```
 ##### Arguments used above:
 `fib` — benchmark task
+
 `50` — number of measured runs
+
 `3` — warmup runs (excluded from latency mean)
+
 `CLEAR_RESULTS=1` — clears previous CSV logs before writing new ones
 
 ##### Outputs:
