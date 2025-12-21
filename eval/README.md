@@ -13,8 +13,10 @@ uvx terminal-bench
 
 Set up API credentials for LLM provider, see examples in [/configs](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/configs)
 
-Change `<SWISSAI_API_KEY>` to your own.
+Replace `<SWISSAI_API_KEY>` with your actual SwissAI API key.
 ```
 export OPENAI_BASE_URL="https://api.swissai.cscs.ch/v1"
 export OPENAI_API_KEY="<SWISSAI_API_KEY>"
 ```
+
+
