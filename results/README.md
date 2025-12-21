@@ -14,11 +14,9 @@ This folder contains:
 ## Folder [/fib_latency_benchmark](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/fib_latency_benchmark)
 
 This folder contains:
-- [`fib_latency_mean.csv`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/fib_latency_mean.csv) 
-  Report table: per-model mean latency (seconds) over **50 measured runs**, excluding **3 warmup runs**.
+- [`fib_latency_mean.csv`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/fib_latency_mean.csv) - report table: per-model mean latency (seconds) over **50 measured runs**, excluding **3 warmup runs**.
 
-- [`fib_latency_summary.csv`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/fib_latency_summary.csv)
-  Raw per-run log used to compute the means. Contains one row per measured run with: `timestamp, model, task, real_seconds, output_file`.
+- [`fib_latency_summary.csv`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/fib_latency_summary.csv) - raw per-run log used to compute the means. Contains one row per measured run with: `timestamp, model, task, real_seconds, output_file`.
 
 - [/sample_outputs](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/fib_latency_benchmark/sample_outputs) folder, that contains a few examples of model outputs from the Fibonacci latency benchmark (based on custom script), such as [`swiss-ai_Apertus-70B-Instruct-2509_fib_20251221_013332.txt`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/sample_outputs/swiss-ai_Apertus-70B-Instruct-2509_fib_20251221_013332.txt)
 
