@@ -46,3 +46,32 @@ uvx terminal-bench run   -d terminal-bench-core==0.1.1  -a terminus    -m openai
 uvx terminal-bench run   -d terminal-bench-core==0.1.1  -a terminus    -m openai/deepseek-ai/DeepSeek-V3.1
 ```
 
+### mistralai/Mistral-7B-v0.1
+```
+uvx terminal-bench run   -d terminal-bench-core==0.1.1  -a terminus    -m openai/mistralai/Mistral-7B-v0.1
+```
+
+### swiss-ai/Apertus-8B-Instruct-2509
+```
+uvx terminal-bench run -d terminal-bench-core==0.1.1 -a terminus  -m openai/swiss-ai/Apertus-8B-Instruct-2509
+```
+
+### swiss-ai/Apertus-70B-Instruct-2509
+```
+uvx terminal-bench run -d terminal-bench-core==0.1.1 -a terminus  -m openai/swiss-ai/Apertus-70B-Instruct-2509
+```
+
+### moonshotai/Kimi-K2-Instruct
+```
+uvx terminal-bench run -d terminal-bench-core==0.1.1 -a terminus  -m openai/moonshotai/Kimi-K2-Instruct
+```
+
+### moonshotai/Kimi-K2-Thinking
+```
+uvx terminal-bench run -d terminal-bench-core==0.1.1 -a terminus  -m openai/moonshotai/Kimi-K2-Thinking
+```
+
+### zai-org/GLM-4.6
+```
+uvx terminal-bench run -d terminal-bench-core==0.1.1 -a terminus  -m openai/zai-org/GLM-4.6
+```
