@@ -10,3 +10,16 @@ env_*.sh
 *secret*
 *.log
 node_modules/
+
+# local secrets
+configs/env_swissai.sh
+configs/env_openrouter.sh
+configs/env_*.sh
+
+# python venv / cache
+.venv/
+__pycache__/
+*.pyc
+
+# results from runs (optional)
+results/
