@@ -1,25 +1,27 @@
-.DS_Store
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 .ipynb_checkpoints/
+
+# venv
 .venv/
 venv/
+ENV/
 .env
-env_*.sh
-*key*
-*secret*
-*.log
-node_modules/
 
-# local secrets
+# macOS
+.DS_Store
+
+# Local configs (real keys)
 configs/env_swissai.sh
 configs/env_openrouter.sh
-configs/env_*.sh
 
-# python venv / cache
-.venv/
-__pycache__/
-*.pyc
+# Generated results (keep only summaries you explicitly commit)
+results/answers/
+results/**/*.txt
 
-# results from runs (optional)
-results/
+# If you want to keep ONE summary CSV tracked, do NOT ignore it.
+# If you want to ignore all CSVs by default, uncomment next line:
+# results/**/*.csv
