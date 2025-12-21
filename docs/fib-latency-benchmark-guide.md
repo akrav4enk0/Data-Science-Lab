@@ -14,11 +14,11 @@ It produces:
 
 - Python 3.10+
 - Dependencies installed from [`requirements.txt`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/requirements.txt)
-- An API key configured (SwissAI or OpenRouter), depending on your setup
+- An API key configured (SwissAI or OpenRouter (see [`env_openrouter_example.sh`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/configs/env_openrouter_example.sh) or [`env_swissai_example.sh`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/configs/env_swissai_example.sh)), depending on your prefered setup.  
 
 ---
 
-## Setup
+## 1) Step: Setup
 
 ```bash
 git clone https://github.com/akrav4enk0/Data-Science-Lab.git
@@ -29,7 +29,7 @@ source .venv/bin/activate
 
 ---
 
-## Configure API access (SwissAI example)
+## 2) Step: Configure API access (SwissAI example)
 
 cp configs/env_swissai_example.sh configs/env_swissai.sh
 # edit configs/env_swissai.sh and add your key, save the file
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 ---
 
-## Running the benchmark
+## 3) Step: Running the benchmark
 
 The main runner script executes multiple measured runs per model and writes the per-run log.
 
