@@ -15,6 +15,13 @@ WARMUP=${4:-3}
 mkdir -p results
 SUMMARY="results/fib_latency_summary.csv"
 
+# Optional: clear previous CSV so the summary counts only THIS run.
+# Usage:
+#   CLEAR_RESULTS=1 ./scripts/bench_loop_fib.sh
+if [[ "${CLEAR_RESULTS:-0}" == "1" ]]; then
+  rm -f "$SUMMARY"
+fi
+
 # Default model list (kept in the repo)
 DEFAULT_MODELS=(
   "swiss-ai/Apertus-8B-Instruct-2509"
@@ -47,7 +54,7 @@ for m in "${MODELS_ARR[@]}"; do
     BENCH_SKIP_LOG=1 "$PYTHON_BIN" src/bench_once_fib.py "$PROMPT" "$TAG" >/dev/null 2>/dev/null || true
   done
 
-  # Measured runs
+  # Measured runs (recorded)
   for _ in $(seq 1 "$RUNS"); do
     "$PYTHON_BIN" src/bench_once_fib.py "$PROMPT" "$TAG"
   done
@@ -64,3 +71,4 @@ awk -F, '
 
 echo
 echo "Done."
+
