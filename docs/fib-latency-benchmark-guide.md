@@ -20,7 +20,7 @@ It produces:
 
 ## 1) Setup
 ```
-```bash
+
 git clone https://github.com/akrav4enk0/Data-Science-Lab.git
 cd Data-Science-Lab
 
