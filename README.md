@@ -37,7 +37,7 @@ As for the Qwen3-Next-80B-A3B-Instruct model, see [/cluster](https://github.com/
 
 ## Run Evaluation
 ### Terminal-bench
-Terminal-Bench requires Docker to run containerized coding tasks.See [docs/terminal-bench-guide.md](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/docs/terminal-bench-guide.md) for more details.
+Terminal-Bench requires Docker to run containerized coding tasks.See [docs/terminal-bench guide](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/docs/terminal-bench-guide.md) for more details.
 
 ## Quickstart with SwissAI API
 
