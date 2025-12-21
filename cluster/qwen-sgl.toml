@@ -1,0 +1,19 @@
+# "src_path:trg_path" mounts the src_path on the host inside the container at the trg_path.
+mounts = [
+  "/iopsstor/store/cscs/swissai/a09/xyao/bin:/ocfbin",
+  "/iopsstor/scratch:/scratch",
+  "/capstor/store/cscs/swissai/infra01:/infra01",
+  "/capstor/store/cscs/swissai/infra01/users/<YOUR_USERNAME>:/infra01/users/<YOUR_USERNAME>",
+  "/capstor/store/cscs/swissai/infra01/hf_models/models:/models"
+]
+
+# The initial directory in the container.
+workdir = "/infra01/users/<YOUR_USERNAME>"
+
+[env]
+HF_HOME="/models"
+HF_TOKEN="<YOUR_HF_API_KEY>"
+
+[annotations]
+com.hooks.aws_ofi_nccl.enabled = "true"
+com.hooks.aws_ofi_nccl.variant = "cuda12"
