@@ -32,7 +32,7 @@ The following models were successfully deployed and evaluated using the model-la
 - Mistral-7B-v0.1
 - GLM-4.6
 
-As for the Qwen3-Next-80B-A3B-Instruct model, see xxxxxx detail.
+As for the Qwen3-Next-80B-A3B-Instruct model, see [/cluster](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/cluster) detail.
 
 
 ## Run Evaluation
