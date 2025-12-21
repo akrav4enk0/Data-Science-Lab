@@ -1,7 +1,7 @@
-1. how to login
+# Qwen3-Next-80B-A3B-Instruct
 
-2. how to spin up / submit job
-
-3. endpoint + base_url
-
-4. how to run terminal-bench
+First access to the Clariden and get the swissAI key. Then clone this repo:
+```
+git clone https://github.com/akrav4enk0/Data-Science-Lab.git
+cd Data-Science-Lab
+```
