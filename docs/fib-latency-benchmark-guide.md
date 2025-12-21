@@ -37,8 +37,9 @@ Here is SwissAI API usage example:
 ```
 cp configs/env_swissai_example.sh configs/env_swissai.sh
 # edit configs/env_swissai.sh and add your key, save the file
-source configs/env_swissai.sh
-pip install -r requirements.txt
+
+source configs/env_swissai.sh #reload env
+pip install -r requirements.txt #install requirements
 ```
 ---
 
