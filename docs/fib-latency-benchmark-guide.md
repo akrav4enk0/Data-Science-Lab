@@ -14,7 +14,7 @@ It produces:
 
 - Python 3.10+
 - Dependencies installed from [`requirements.txt`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/requirements.txt)
-- An API key configured ([SwissAI](https://serving.swissai.cscs.ch/) or [OpenRouter](https://openrouter.ai/), depending on your prefered setup.  
+- An API key configured ( get an API key on [SwissAI](https://serving.swissai.cscs.ch/) or [OpenRouter](https://openrouter.ai/), depending on your prefered setup).  
 
 ---
 
