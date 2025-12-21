@@ -37,7 +37,10 @@ As for the Qwen3-Next-80B-A3B-Instruct model, see [/cluster](https://github.com/
 
 ## Run Evaluation
 ### Terminal-bench
-tbc
+First you need to downlowd Terminal-bench:
+```
+
+```
 
 
 ## Quickstart with SwissAI API
