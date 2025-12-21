@@ -18,9 +18,31 @@ Replace `<SWISSAI_API_KEY>` with your actual SwissAI API key.
 export OPENAI_BASE_URL="https://api.swissai.cscs.ch/v1"
 export OPENAI_API_KEY="<SWISSAI_API_KEY>"
 ```
+You can test if the model works:
+```
+curl https://api.swissai.cscs.ch/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -d '{
+    "model": "<YOUR_TEST_MODEL>",
+    "messages": [
+      {"role": "user", "content": "who are you?"}
+    ],
+    "max_tokens": 100
+  }'
+```
+
 After Docker and Terminal-Bench setup are done, you can test all the models through SwissAI.
 
+The basic command is:
+```
+uvx terminal-bench run   -d terminal-bench-core==0.1.1  -a terminus    -m openai/<YOUR_MODEL_NAME>
+```
+`-d terminal-bench-core==0.1.1` includes 80 tasks, use `uvx terminal-bench datasets list` to check available datasets.
 
-###
 
+### deepseek-ai/DeepSeek-V3.1
+```
+uvx terminal-bench run   -d terminal-bench-core==0.1.1  -a terminus    -m openai/deepseek-ai/DeepSeek-V3.1
+```
 
