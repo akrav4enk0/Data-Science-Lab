@@ -1,0 +1,9 @@
+model,resolved_trials,unresolved_trials,total_trials,accuracy
+GLM-4.6,35,45,80,0.4375
+Kimi-K2-Thinking,24,56,80,0.3000
+DeepSeek-V3.1,22,58,80,0.2750
+Kimi-K2-Instruct,19,61,80,0.2375
+Qwen3-80B,11,69,80,0.1375
+Apertus-70B,3,77,80,0.0375
+Apertus-8B,2,78,80,0.0250
+Mistral-7B,1,79,80,0.0125
