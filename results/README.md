@@ -14,7 +14,7 @@ This folder contains:
 ## Folder [/fib_latency_benchmark](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/fib_latency_benchmark)
 
 This folder contains:
-- [`fib_latency_mean.csv`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/fib_latency_mean.csv) - report table: per-model mean latency (seconds) over **50 measured runs**, excluding **3 warmup runs**.
+- [`fib_latency_mean.csv`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/fib_latency_mean.csv) - report table: per-model mean latency (seconds) over 50 measured runs, excluding 3 warmup runs.
 
 - [`fib_latency_summary.csv`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/fib_latency_summary.csv) - raw per-run log used to compute the means. Contains one row per measured run with: `timestamp, model, task, real_seconds, output_file`.
 
