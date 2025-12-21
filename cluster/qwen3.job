@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH --job-name=sgl-qwen3-instruct-<YOUR_USERNAME>
+#SBATCH --container-writable
+#SBATCH --environment=/users/<YOUR_USERNAME>/serving/qwen-sgl.toml
+#SBATCH --time=12:00:00
+#SBATCH --ntasks-per-node=1
+#SBATCH --dependency=singleton
+#SBATCH --account=infra01
+
+export NCCL_SOCKET_IFNAME=lo
+export GLOO_SOCKET_IFNAME=lo
+export PROMETHEUS_MULTIPROC_DIR=/ocfbin/scratch
+# export IPFS_LOGGING=debug
+export NO_PROXY=0.0.0.0,127.0.0.1
+export JSON_OVERRIDE='{"rope_scaling":{"rope_type":"yarn","factor":4.0,"original_max_position_embeddings":32768}}'
+export SGLANG_ALLOW_OVERWRITE_LONGER_CONTEXT_LEN=1
+
+#AMD ONLY
+#export SP_NCCL_SO_PATH=/usr/lib/x86_64-linux-gnu/
+
+#ARM ONLY
+export SP_NCCL_SO_PATH=/usr/lib/aarch64-linux-gnu/
+
+
+# AMD64 ONLY
+#/ocfbin/ocf-amd64 start --bootstrap.addr /ip4/148.187.108.172/tcp/43905/p2p/QmQsNxJVa2rnidp998qAz4FCutgmjBsuZqtrxUUy5YfgBu --subprocess "python3 -m sglang.launch_server --model-path Qwen/Qwen3-Next-80B-A3B-Instruct --host localhost --port 8080 --tp-size 4 --context-length 262144 --mem-fraction-static 0.8 --speculative-algo NEXTN --speculative-num-steps 3 --speculative-eagle-topk 1 --speculative-num-draft-tokens 4" --service.name llm --service.port 8080
+
+# ARM64 ONLY
+/ocfbin/ocf-arm start --bootstrap.addr /ip4/148.187.108.172/tcp/43905/p2p/QmQsNxJVa2rnidp998qAz4FCutgmjBsuZqtrxUUy5YfgBu --subprocess "python3 -m sglang.launch_server --model-path Qwen/Qwen3-Next-80B-A3B-Instruct --host localhost --port 8080 --tp-size 4 --context-length 262144 --mem-fraction-static 0.8 --speculative-algo NEXTN --speculative-num-steps 3 --speculative-eagle-topk 1 --speculative-num-draft-tokens 4" --service.name llm --service.port 8080
