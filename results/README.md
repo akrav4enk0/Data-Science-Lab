@@ -18,11 +18,12 @@ This folder contains:
 
 - [`fib_latency_summary.csv`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/fib_latency_summary.csv) - raw per-run log used to compute the means. Contains one row per measured run with: `timestamp, model, task, real_seconds, output_file`.
 
-- [/sample_outputs](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/fib_latency_benchmark/sample_outputs) folder, that contains a few examples of model outputs from the Fibonacci latency benchmark (based on custom script), such as [`swiss-ai_Apertus-70B-Instruct-2509_fib_20251221_013332.txt`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/sample_outputs/swiss-ai_Apertus-70B-Instruct-2509_fib_20251221_013332.txt)
+- [/sample_outputs](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/fib_latency_benchmark/sample_outputs) folder, that contains a few examples of model outputs from the Fibonacci latency benchmark (based on custom script), committed as evidence of actual runs, such as [`swiss-ai_Apertus-70B-Instruct-2509_fib_20251221_013332.txt`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/sample_outputs/swiss-ai_Apertus-70B-Instruct-2509_fib_20251221_013332.txt)
+Full per-run outputs are generated locally (one file per run) and are not fully tracked in Git to keep the repository lightweight.
 
-## How these were produced
 
-Fibonacci latency benchmarks were executed via:
+## Reproducing the results
 
-```bash
-CLEAR_RESULTS=1 MODELS="modelA,modelB" ./scripts/bench_loop_fib.sh "" fib 50 3
+- Terminal-Bench runs: see [`docs/terminal-bench-guide.md`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/docs/terminal-bench-guide.md)
+- Fibonacci latency benchmark: see [`docs/fib-latency-benchmark-guide.md`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/docs/fib-latency-benchmark-guide.md)
+
