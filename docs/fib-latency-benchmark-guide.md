@@ -19,14 +19,14 @@ It produces:
 ---
 
 ## 1) Step: Setup
-
+```
 ```bash
 git clone https://github.com/akrav4enk0/Data-Science-Lab.git
 cd Data-Science-Lab
 
 python3 -m venv .venv
 source .venv/bin/activate
-
+```
 ---
 
 ## 2) Step: Configure API access
@@ -34,20 +34,24 @@ see [`env_openrouter_example.sh`](https://github.com/akrav4enk0/Data-Science-Lab
 
 Here is SwissAI API usage example:
 
+```
 cp configs/env_swissai_example.sh configs/env_swissai.sh
 # edit configs/env_swissai.sh and add your key, save the file
 source configs/env_swissai.sh
 pip install -r requirements.txt
-
+```
 ---
 
 ## 3) Step: Running the benchmark
 
 The main runner script executes multiple measured runs per model and writes the per-run log.
-
+```
 chmod +x scripts/bench_loop_fib.sh
-
+```
 # choose available models (spun up models are shown here: https://serving.swissai.cscs.ch/)
+
+```
 CLEAR_RESULTS=1 \
 MODELS="MODEL_A,MODEL_B,MODEL_C" \
 ./scripts/bench_loop_fib.sh "" fib 50 3
+```
