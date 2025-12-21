@@ -15,9 +15,9 @@ ax1.set_facecolor('#ffffff')
 
 ax2 = ax1.twiny()
 
-color_resolved = '#5ebd9d'    # 柔和的青绿色
-color_unresolved = '#e07b7b'  # 柔和的珊瑚红
-color_line = '#4a7bb7'        # 更深的蓝色
+color_resolved = '#5ebd9d'   
+color_unresolved = '#e07b7b'  
+color_line = '#4a7bb7'       
 
 y = np.arange(len(models))
 height = 0.65
