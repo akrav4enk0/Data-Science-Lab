@@ -4,7 +4,7 @@ Reproducible code and results for the ETH Zurich Data Science Lab (263-3300-10L)
 
 Project title:  Evaluation of a Swiss LLM-based Coding Assistant
 
-This project was carried out in the context of the SwissAI Initiative [SwissAI Initiative](https://www.swiss-ai.org/apertus) and supported by the [ETH AI Center](https://ai.ethz.ch/).
+This project was carried out in the context of the SwissAI Initiative [SwissAI Initiative](https://www.swiss-ai.org/apertus) and supported by the [ETH AI Center](https://ai.ethz.ch/) during the [Data Science Lab course](https://ai.ethz.ch/education/courses/datasciencelab.html) at ETH Zurich.
 
 ## Prerequisites
 Before running the model deployment, you need access to Clariden cluster, please follow the [official setup guide for Clariden Cluster](https://github.com/swiss-ai/documentation/blob/main/pages/setup_clariden.md) to request credentials and keys.
