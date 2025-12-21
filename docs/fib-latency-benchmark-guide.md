@@ -30,7 +30,7 @@ source .venv/bin/activate
 ---
 
 ## 2) Configure API access
-see [`env_openrouter_example.sh`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/configs/env_openrouter_example.sh) or [`env_swissai_example.sh`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/configs/env_swissai_example.sh))
+For details see [`env_openrouter_example.sh`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/configs/env_openrouter_example.sh) or [`env_swissai_example.sh`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/configs/env_swissai_example.sh))
 
 Here is SwissAI API usage example:
 
