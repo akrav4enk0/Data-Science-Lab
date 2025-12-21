@@ -69,6 +69,26 @@ MODELS="MODEL_A,MODEL_B,MODEL_C" \
 
 `CLEAR_RESULTS=1` — clears previous CSV logs before writing new ones
 
+To check the file size
+
+```
+wc -l results/fib_latency_summary.csv
+```
+
+To print the summary (mean latency per model) from the CSV
+
+```
+awk -F, '
+  NR==1 {next}
+  {sum[$2]+=$4; n[$2]++}
+  END {
+    print "model,Number of runs,Mean latency [s]"
+    for (m in n) printf "%s,%d,%.6f\n", m, n[m], sum[m]/n[m]
+  }' results/fib_latency_summary.csv | sort > results/fib_latency_mean.csv
+
+cat results/fib_latency_mean.csv
+```
+
 ##### Outputs:
 - Per-run log (evidence of runs) [`results/fib_latency_benchmark/fib_latency_summary.csv`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/fib_latency_summary.csv) contains one row per measured run with: `timestamp`, `model`, `task`, `real_seconds`, `output_file`.
 
