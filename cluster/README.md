@@ -11,3 +11,13 @@ mkdir -p ~/cluster
 cp cluster/qwen-sgl.toml ~/cluster/
 cp cluster/qwen3.job ~/cluster/
 ```
+Replace <YOUR_USERNAME> and <YOUR_HF_API_KEY>
+```
+nano ~/cluster/qwen-sgl.toml 
+nano ~/cluster/qwen3.job
+```
+Then launch the job:
+```
+cd ~/cluster
+sbatch qwen3.job
+```
