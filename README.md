@@ -61,10 +61,11 @@ cp configs/env_swissai_example.sh configs/env_swissai.sh
 source configs/env_swissai.sh
 
 chmod +x scripts/bench_loop_fib.sh
+
 # choose available models (spun up models shown here: https://serving.swissai.cscs.ch/)
-
-CLEAR_RESULTS=1 MODELS="AVAILABLE_MODEL" ./scripts/bench_loop_fib.sh "" fib 50 3
-
+CLEAR_RESULTS=1 \
+MODELS="AVAILABLE_MODEL_1", "AVAILABLE_MODEL_2", "AVAILABLE_MODEL_3" \
+./scripts/bench_loop_fib.sh "" fib 50 3
 
 
 
