@@ -13,8 +13,8 @@ cp cluster/qwen3.job ~/cluster/
 ```
 Replace <YOUR_USERNAME> and <YOUR_HF_API_KEY>
 ```
-nano ~/cluster/qwen-sgl.toml 
-nano ~/cluster/qwen3.job
+vim ~/cluster/qwen-sgl.toml 
+vim ~/cluster/qwen3.job
 ```
 Then launch the job:
 ```
