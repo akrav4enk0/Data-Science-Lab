@@ -1,6 +1,6 @@
 # Fibonacci Latency Benchmark 
 
-This custom created benchmark measures **per-request latency** for LLMs on a simple coding prompt (Fibonacci),
+This custom-created benchmark measures **per-request latency** for LLMs on a simple coding prompt (Fibonacci),
 using a custom script.
 
 It produces:
