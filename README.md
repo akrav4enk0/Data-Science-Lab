@@ -38,11 +38,14 @@ As for the Qwen3-Next-80B-A3B-Instruct model, see [/cluster](https://github.com/
 ## Run Evaluation Guides
 
 ### Terminal-bench
-Terminal-Bench requires Docker to run containerized coding tasks. See [docs/terminal-bench guide](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/docs/terminal-bench-guide.md) for more details.
+Terminal-Bench provides a standardized evaluation suite for coding agents using containerized tasks (Docker required), with outputs stored as per-model JSON run records plus summary statistics.
+
+- See [docs/terminal-bench guide](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/docs/terminal-bench-guide.md) for more details.
 
 ### Fibonacci latency benchmark (custom)
+This custom benchmark focuses on latency measurement using a controlled Fibonacci prompt, logging every run (timestamp + runtime) and generating an aggregated mean-latency table used in the report.
 
-- Fibonacci latency benchmark (custom): [docs/fib-latency-benchmark-guide.md](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/docs/fib-latency-benchmark-guide.md)
+- See [docs/fib-latency-benchmark-guide.md](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/docs/fib-latency-benchmark-guide.md)
 
 ## Results
 
