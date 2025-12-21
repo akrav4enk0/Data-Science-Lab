@@ -1,0 +1,4 @@
+model,n,mean_seconds
+Qwen/Qwen3-Next-80B-A3B-Thinking,50,2.057140
+swiss-ai/Apertus-70B-Instruct-2509,50,6.646340
+swiss-ai/Apertus-8B-Instruct-2509,50,0.868340
