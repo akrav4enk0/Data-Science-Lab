@@ -75,7 +75,7 @@ awk -F, '
   NR==1 {next}
   {sum[$2]+=$4; n[$2]++}
   END {
-    print "model,n,mean_seconds"
+    print "model,Number of runs,Mean latency [s]"
     for (m in n) printf "%s,%d,%.6f\n", m, n[m], sum[m]/n[m]
   }' results/fib_latency_summary.csv | sort > results/fib_latency_mean.csv
 
