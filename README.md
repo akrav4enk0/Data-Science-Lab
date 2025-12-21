@@ -35,50 +35,19 @@ The following models were successfully deployed and evaluated using the model-la
 As for the Qwen3-Next-80B-A3B-Instruct model, see [/cluster](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/cluster) details.
 
 
-## Run Evaluation
+## Run Evaluation Guides
+
 ### Terminal-bench
-Terminal-Bench requires Docker to run containerized coding tasks.See [docs/terminal-bench guide](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/docs/terminal-bench-guide.md) for more details.
+Terminal-Bench requires Docker to run containerized coding tasks. See [docs/terminal-bench guide](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/docs/terminal-bench-guide.md) for more details.
 
-## Quickstart with SwissAI API
+### Fibonacci latency benchmark (custom)
 
-### Prerequisites
-- Python 3.10+
-- A SwissAI API key 
+- Fibonacci latency benchmark (custom): [docs/fib-latency-benchmark-guide.md](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/docs/fib-latency-benchmark-guide.md)
 
-### Setup
-```bash
-git clone https://github.com/akrav4enk0/Data-Science-Lab.git
-cd Data-Science-Lab
+## Results
 
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-
-
-cp configs/env_swissai_example.sh configs/env_swissai.sh
-# edit configs/env_swissai.sh and paste your key using - nano configs/env_swissai.sh
-source configs/env_swissai.sh
-
-chmod +x scripts/bench_loop_fib.sh
-
-# choose available models (spun up models shown here: https://serving.swissai.cscs.ch/)
-CLEAR_RESULTS=1 \
-MODELS="AVAILABLE_MODEL_1", "AVAILABLE_MODEL_2", "AVAILABLE_MODEL_3" \
-./scripts/bench_loop_fib.sh "" fib 50 3
-
-#to check the file size
-wc -l results/fib_latency_summary.csv
-
-#to print the summary (mean latency per model) from the CSV
-awk -F, '
-  NR==1 {next}
-  {sum[$2]+=$4; n[$2]++}
-  END {
-    print "model,Number of runs,Mean latency [s]"
-    for (m in n) printf "%s,%d,%.6f\n", m, n[m], sum[m]/n[m]
-  }' results/fib_latency_summary.csv | sort > results/fib_latency_mean.csv
-
-cat results/fib_latency_mean.csv
-
+Generated artifacts are stored under [`results/`](results/), separated into:
+- [`results/terminal-bench/`](results/terminal-bench/)
+- [`results/fib_latency_benchmark/`](results/fib_latency_benchmark/)
 
 
