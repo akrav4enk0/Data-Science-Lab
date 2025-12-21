@@ -1,4 +1,4 @@
-# Data-Science-Lab: Evaluation of a Swiss LLM-based Coding Assistant
+# Data Science Lab: Evaluation of a Swiss LLM-based Coding Assistant
 
 Reproducible code and results for the ETH Zurich Data Science Lab (263-3300-10L) project (Dec 2025): deploying SwissAI/Clariden-hosted LLMs and evaluating them via Terminal-Bench and a custom Fibonacci latency benchmark.
 
