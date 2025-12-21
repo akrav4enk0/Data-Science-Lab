@@ -10,10 +10,9 @@ This folder contains:
 - `terminal-bench_analysis.png` - visualization of the `terminalbench_summary.csv` shown as `plot_terminalbench_results.py`.
   The code is in [/scripts/terminal-bench](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/scripts/terminal-bench) . 
   
-- [/runs_json] folder (https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/terminal-bench/runs_json), that contains all Terminal-Bench JSON result records, for example [`Apertus-70B-results.json`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/terminal-bench/runs_json/Apertus-70B-results.json)
+- [/runs_json](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/terminal-bench/runs_json) folder, that contains all Terminal-Bench JSON result records, for example [`Apertus-70B-results.json`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/terminal-bench/runs_json/Apertus-70B-results.json)
 
-## Folder
-[/fib_latency_benchmark](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/fib_latency_benchmark)
+## Folder [/fib_latency_benchmark](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/fib_latency_benchmark)
 
 This folder contains:
 - `fib_latency_mean.csv`  
