@@ -11,10 +11,10 @@ This folder contains:
 - `terminal-bench_analysis.png` - visualization of the `terminalbench_summary.csv` shown as `plot_terminalbench_results.py`.
   The code is in [/scripts/terminal-bench](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/scripts/terminal-bench) . 
   
-- [/runs_json] folder (https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/terminal-bench/runs_json), that contains all Terminal-Bench JSON result records, for example [`Apertus-70B-results.json`] (https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/terminal-bench/runs_json/Apertus-70B-results.json)
+- [/runs_json] folder (https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/terminal-bench/runs_json), that contains all Terminal-Bench JSON result records, for example [`Apertus-70B-results.json`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/terminal-bench/runs_json/Apertus-70B-results.json)
 
 ## Folder
-[/fib_latency_benchmark] (https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/fib_latency_benchmark)
+[/fib_latency_benchmark](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/fib_latency_benchmark)
 
 This folder contains:
 - `fib_latency_mean.csv`  
@@ -23,7 +23,7 @@ This folder contains:
 - `fib_latency_summary.csv`  
   Raw per-run log used to compute the means. Contains one row per measured run with: `timestamp, model, task, real_seconds, output_file`.
 
-- [/sample_outputs] folder (https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/fib_latency_benchmark/sample_outputs), that contains a few examples of model outputs from the Fibonacci latency benchmark (based on custom script), such as [`swiss-ai_Apertus-70B-Instruct-2509_fib_20251221_013332.txt`] (https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/sample_outputs/swiss-ai_Apertus-70B-Instruct-2509_fib_20251221_013332.txt)
+- [/sample_outputs](https://github.com/akrav4enk0/Data-Science-Lab/tree/main/results/fib_latency_benchmark/sample_outputs) folder, that contains a few examples of model outputs from the Fibonacci latency benchmark (based on custom script), such as [`swiss-ai_Apertus-70B-Instruct-2509_fib_20251221_013332.txt`](https://github.com/akrav4enk0/Data-Science-Lab/blob/main/results/fib_latency_benchmark/sample_outputs/swiss-ai_Apertus-70B-Instruct-2509_fib_20251221_013332.txt)
 
 ## How these were produced
 
