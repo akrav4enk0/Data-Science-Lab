@@ -52,7 +52,7 @@ chmod +x scripts/bench_loop_fib.sh
 
 # 4 Models
 
-Choose available models (spun up models are shown here: https://serving.swissai.cscs.ch/)
+Choose available models (spun up models are shown here: https://serving.swissai.cscs.ch/) and paste model's names instead of `MODEL_A`, etc. 
 
 ```
 CLEAR_RESULTS=1 \
