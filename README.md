@@ -67,6 +67,19 @@ CLEAR_RESULTS=1 \
 MODELS="AVAILABLE_MODEL_1", "AVAILABLE_MODEL_2", "AVAILABLE_MODEL_3" \
 ./scripts/bench_loop_fib.sh "" fib 50 3
 
+#to check the file size
+wc -l results/fib_latency_summary.csv
+
+#to print the summary (mean latency per model) from the CSV
+awk -F, '
+  NR==1 {next}
+  {sum[$2]+=$4; n[$2]++}
+  END {
+    print "model,n,mean_seconds"
+    for (m in n) printf "%s,%d,%.6f\n", m, n[m], sum[m]/n[m]
+  }' results/fib_latency_summary.csv | sort > results/fib_latency_mean.csv
+
+cat results/fib_latency_mean.csv
 
 
 
