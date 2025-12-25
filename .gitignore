@@ -1,22 +1,77 @@
+# -----------------------------
 # Python
-__pycache__/
+# -----------------------------
+
 *.pyc
 *.pyo
 *.pyd
 .ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
 
-# venv
+# -----------------------------
+# Virtual environments
+# -----------------------------
 .venv/
 venv/
 ENV/
 .env
 
+# -----------------------------
 # macOS
+# -----------------------------
 .DS_Store
 
-# Local configs (real keys)
+# -----------------------------
+# Editors / IDEs
+# -----------------------------
+.vscode/
+.idea/
+*.swp
+
+# -----------------------------
+# Python tooling / tests / lint / type checking
+# -----------------------------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+htmlcov/
+
+# -----------------------------
+# Packaging / builds
+# -----------------------------
+build/
+dist/
+*.egg-info/
+
+# -----------------------------
+# Logs / runtime files (incl. SLURM)
+# -----------------------------
+*.log
+*.tmp
+slurm-*.out
+slurm-*.err
+*.out
+*.err
+
+# -----------------------------
+# Local configs 
+# -----------------------------
 configs/env_swissai.sh
 configs/env_openrouter.sh
+
+# -----------------------------
+# Generated results (keep only summaries you explicitly commit)
+# -----------------------------
+results/answers/
+results/**/*.txt
+
+# If you want to ignore all CSVs by default, uncomment next line:
+# results/**/*.csv
+
 
 # Generated results (keep only summaries you explicitly commit)
 results/answers/
